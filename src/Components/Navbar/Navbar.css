@@ -1,0 +1,130 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 170px;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.navbar img{
+    width: 120px;
+    height: 65px;
+}   
+
+.nav-connect{
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    
+    background: linear-gradient(270deg, #da7c25, #b923e1, #da7c25);
+    background-size: 300% 300%;
+    
+    transition: transform 0.5s ease;
+    animation: gradientMove 4s ease infinite;
+}
+
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-menu li img{
+    display: flex;
+    margin:  0 auto;
+    max-width: 60px;
+    margin-top: -20px;  
+}
+
+.anchor-link{
+    text-decoration: none;
+    color: white;
+}
+.nav-mob-close{
+    display: none;
+}
+.nav-mob-open{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        margin: 20px 50px;
+    }
+    .nav-connect{
+        display: none;
+    }
+    .nav-mob-open{
+        display: block;
+        position: absolute;
+        right: 30px;
+        width: 20px!important;
+        height: 20px!important;
+    }
+    .nav-mob-close{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 20px !important;
+        height: 20px!important;
+        z-index: 10;
+    }
+    .nav-menu{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1F0016;
+        width: min(350px, 90vw);
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+    .nav-menu li{
+        font-size: 18px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Additional responsive refinements */
+@media (max-width: 639px) {
+    .navbar{ margin: 12px 16px; }
+    .navbar img{ width: 90px; height: 48px; }
+    /* keep mobile nav-menu available so JS can open/close it */
+    /* .nav-menu{ visible and positioned by the existing rules } */
+    .nav-mob-open{ display: block; }
+    .nav-connect{ display: none; }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .navbar{ margin: 18px 60px; }
+    .nav-menu{ gap: 30px; font-size: 18px; }
+    .nav-menu li img{ max-width: 48px; margin-top: -10px; }
+    .nav-connect{ padding: 10px 20px; font-size: 18px; }
+}
+
+/* removed laptop-specific overrides to preserve original desktop layout */
