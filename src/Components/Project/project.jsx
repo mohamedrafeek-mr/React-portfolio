@@ -7,8 +7,8 @@ import arrow_icom from '../../assets/arrow_icon.svg'
 const Project = () => {
   const [showAll, setShowAll] = useState(false);
   const [filter, setFilter] = useState('All');
-  const filters = ['All', 'HTML', 'CSS', 'JavaScript', 'React js', 'Python'];
-  // Determine filtered set (if a specific filter is chosen, show all matching items)
+  const filters = ['All', 'HTML', 'CSS', 'JavaScript', 'React js', 'Python', 'Django'];
+
   const matchesFilter = (work) => {
     if (filter === 'All') return true;
     const key = filter.toLowerCase();
@@ -38,11 +38,11 @@ const Project = () => {
       </div>
       <div className="project-container">
         {visibleWorks.map((work, index) => {
-            return (
-              <a key={work.w_no || index} href={work.link || '#'} target="_blank" rel="noopener noreferrer" className="work-item">
-                <img src={work.w_img} alt={work.w_name || `project-${index}`} className='project-img'/>
-              </a>
-            )
+          return (
+            <a key={work.w_no || index} href={work.link || '#'} target="_blank" rel="noopener noreferrer" className="work-item">
+              <img src={work.w_img} alt={work.w_name || `project-${index}`} className='project-img' />
+            </a>
+          )
         })}
 
       </div>

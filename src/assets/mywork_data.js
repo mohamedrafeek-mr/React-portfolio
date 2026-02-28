@@ -12,6 +12,9 @@ import project11_img from '../assets/project11.png'
 import project12_img from '../assets/project12.png'
 import project13_img from '../assets/project13.png'
 import project14_img from '../assets/project14.png'
+import project15_img from '../assets/project15.png'
+import project16_img from '../assets/project16.png'
+import project17_img from '../assets/project17.png'
 
 const mywork_data = [
     {
@@ -124,6 +127,31 @@ const mywork_data = [
         w_img:project14_img,
         code:"Python",
         tags:["python"]
+    }
+    ,{
+        w_no:15,
+        w_name:"Full stack web application",
+        w_img:project15_img,
+        link:"https://foodhub-tnqb.onrender.com/",
+        code:"django",
+        tags:["Django","python"]
+    }
+    ,
+    {
+        w_no:16,
+        w_name:"Full stack web application",
+        w_img:project16_img,
+        link:"https://student-record-system-zxv3.onrender.com/",
+        code:"django",
+        tags:["Django","python"]
+    },
+    {
+        w_no:17,
+        w_name:"Full stack web application",
+        w_img:project17_img,
+        link:"https://youtube-hp09.onrender.com/",
+        code:"django",
+        tags:["Django","python"]
     }
 ]
  
