@@ -15,6 +15,7 @@ import project14_img from '../assets/project14.png'
 import project15_img from '../assets/project15.png'
 import project16_img from '../assets/project16.png'
 import project17_img from '../assets/project17.png'
+import project18_img from '../assets/project18.png'
 
 const mywork_data = [
     {
@@ -150,6 +151,14 @@ const mywork_data = [
         w_name:"Full stack web application",
         w_img:project17_img,
         link:"https://youtube-hp09.onrender.com/",
+        code:"django",
+        tags:["Django","python"]
+    },
+    {
+        w_no:18,
+        w_name:"Full stack web application",
+        w_img:project18_img,
+        link:"https://natu-ecom.onrender.com",
         code:"django",
         tags:["Django","python"]
     }
